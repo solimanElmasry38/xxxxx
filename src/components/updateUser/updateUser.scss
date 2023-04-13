@@ -1,0 +1,162 @@
+@import "../../vars.scss";
+
+#updateUserPerant {
+    width:100%;
+     #updateUserSec {
+    height: 88vh;
+    border: none;
+    margin:0;
+    border-radius: 20px;
+    overflow: hidden;
+    grid-area: 2/2/3/3;
+    box-shadow: 7px -7px 14px $lightShadowColor, -7px 7px 14px $darkShadowColor;
+    > div {
+      height: 100%;
+    }
+    .overLay {
+      background: $lightAltColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60%;
+      > .contentBox {
+        width: 80%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        > .contentHeading {
+          font-size: 60px;
+          font-weight: 900;
+          color: $darkColor;
+          text-transform: capitalize;
+        }
+        > .content {
+          width: 260px;
+          color: wheat;
+        }
+        > .Btn {
+          width: fit-content;
+          padding: 10px 35px;
+          border-radius: 20px;
+          color: wheat;
+          font-size: 20px;
+          text-transform: capitalize;
+          border: 1px solid $darkColor;
+        }
+      }
+    }
+    .formContainer {
+      background: $lightAltColor;
+      width: 40%;
+      #updateUserForm{
+        height: 100%;
+        grid-template-columns: 1fr 280px 1fr;
+        grid-template-rows: repeat(3, 1fr) repeat(4, 80px) 1fr;
+        grid-gap: 10px;
+        width: 95%;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        background-color: white;
+        margin-left: 5%;
+        box-shadow: -5px 0px 14px #ffffff80;
+        display: grid;
+        padding: 10px 0;
+        grid-gap: 10px;
+        .formHeading {
+          grid-column: 2/3;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: capitalize;
+          font-size: 30px;
+        }
+        .socialBox {
+          grid-column: 2/3;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          i {
+            font-size: 20px;
+          }
+        }
+        .notice {
+          grid-column: 2/3;
+          display: flex;
+          align-items: center;
+          text-transform: capitalize;
+          color: rgb(131, 130, 130);
+          justify-content: center;
+          grid-row: 3/4;
+        }
+        #nameFieldBox {
+          grid-row: 4/5;
+        }
+        #emailFieldBox {
+          grid-row: 5/6;
+        }
+        #passwordFieldBox {
+          grid-row: 6/7;
+        }
+        #passwordConfFieldBox {
+          grid-row: 7/8;
+        }
+        #nameFieldBox,
+        #emailFieldBox,
+        #passwordFieldBox,
+        #passwordConfFieldBox {
+          grid-column: 2/3;
+          position: relative;
+          display: flex;
+          justify-content: flex-start;
+          flex-direction: column;
+          &::after {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+          }
+          &.valid::after {
+            content: "✓";
+            color: rgb(3, 230, 3);
+          }
+          &.notvalid::after {
+            content: "×";
+            color: red;
+          }
+          input {
+            width: 100%;
+            background: rgba(218, 216, 216, 0.5);
+            border-radius: 8px;
+          }
+          .errorMassege {
+            color: red;
+            font-size: 14px;
+            margin: 5px 0 0 5px;
+          }
+        }
+        .submitBtn {
+          grid-column: 2/3;
+          width: fit-content;
+          height: fit-content;
+          padding: 10px 30px;
+          border-radius: 25px;
+          color: rgb(255, 255, 255);
+          background: $lightAltColor;
+          font-size: 18px;
+          text-transform: capitalize;
+          justify-self: center;
+          grid-row: 8/9;
+        }
+      }
+    }
+  }
+}

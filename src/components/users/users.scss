@@ -1,0 +1,87 @@
+@import "../../vars.scss";
+
+.usersTaple {
+  width: 100%;
+  max-height: 100%;
+  // border-collapse: collapse;
+  thead {
+    height: 40px;
+
+    th {
+      border: 1px solid $darkAltColor;
+      background: $lightAltColor;
+      height: 100%;
+      // border-radius: 5px;
+    }
+  }
+
+  tbody {
+    tr {
+       height: 50px;
+    background: $lightColor;
+
+    &:nth-child(even) {
+      background: #6a86db;
+    }
+      td {
+    border: 3px solid $darkColor; 
+    padding: 10px;
+
+    border-radius: 10px;
+
+        &.action {
+          // display:flex;
+          // align-items: center;
+          // justify-content: space-between;
+          position:relative;
+          a{
+          position:absolute;
+          top:50%;
+          transform: translateY(-50%);
+          left:10px;
+          i{
+
+            color:$lightShadowColor;
+            font-weight: 100;
+          }
+
+          }
+          >i{
+ position:absolute;
+          top:50%;
+          transform: translateY(-50%);
+          right:10px;
+          cursor:pointer;
+          color:$darkAltColor;
+          }
+        }
+      }
+    }
+  }
+
+  // td {
+  //   
+  // }
+  // tr {
+  //   
+  // }
+
+  // .actionContainer {
+  //   width: 93px;
+  //   height: 44px;
+  //   // padding: 10px;
+  //   border: 3px solid $darkColor;
+  //   border-radius: 10px;
+  //   overflow: hidden;
+
+  //   .action {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: space-between;
+  //     width: 93px;
+
+  //     height: 44px;
+  //     border: none;
+  //   }
+  // }
+}
